@@ -65,7 +65,11 @@ a{
 }
 
 .company-info h5 {
-  font-size: 40px;
+  font-size: 60px;
+}
+
+.company-info p {
+  font-size: 18px;
 }
 
 .login-form {
