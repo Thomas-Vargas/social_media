@@ -1,13 +1,16 @@
+import { Link } from 'react-router-dom'
+
 const NavBar = () => {
     return (
       <div>
         <nav className='navbar navbar-expands-lg navbar-dark bg-dark'>
             <div className="container-fluid">
-              <a className='navbar-brand' href='#'>Social Media</a>
-
+            <Link to='/' className='navbar-brand'>
+              Social Media
+            </Link>
               <ul className='navbar-nav flex-row'>
                 <li className='nav-item'>
-                  <a className='nav-link active' href="#">Home</a>
+                  <Link to='/' className='nav-link'>Home</Link>
                 </li>
                 <li className='nav-item'>
                   <button type="button" className="btn btn-primary"   data-bs-toggle="modal" data-bs-target="#loginModal">

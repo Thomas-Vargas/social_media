@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const LoginPage = () => {
     return (
       <section id='login-page'>
@@ -24,13 +26,11 @@ const LoginPage = () => {
               </div>
               <div className="login-form-btns">
                 <button type="submit" className="btn btn-primary">Login</button>
-                <button type="button" className="btn btn-secondary" onClick={(e) => {
-                  e.preventDefault()
-                  window.location.href='#';
-                }}
-                >
-                  Sign up
-                </button>
+                <Link to='/register' >
+                    <button type="button" className="btn btn-secondary">
+                        Sign Up
+                    </button>
+                </Link>
               </div>
             </form>
           </div>

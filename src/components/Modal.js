@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const Modal = () => {
     return (
       <div className="modal fade" id="loginModal" tabIndex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -26,13 +28,11 @@ const Modal = () => {
             </div>
             <div className="modal-footer">
               <button type="submit" className="btn btn-primary">Login</button>
-              <button type="button" className="btn btn-secondary" onClick={(e) => {
-                  e.preventDefault()
-                  window.location.href='#';
-                }}
-                >
-                  Sign up
-                </button>
+                <Link to='/register' data-bs-dismiss="modal">
+                    <button type="button" className="btn btn-secondary" >
+                        Sign Up
+                    </button>
+                </Link>
             </div>
           </div>
         </div>
