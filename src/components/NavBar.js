@@ -1,5 +1,5 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
+import React from 'react'
 
 const NavBar = () => {
     return (
@@ -7,7 +7,7 @@ const NavBar = () => {
             <nav className='navbar navbar-expands-lg navbar-dark bg-dark'>
                 <div className="container-fluid">
                     <Link to='/' className='navbar-brand'>
-              Social Media
+                        Social Media
                     </Link>
                     <ul className='navbar-nav flex-row'>
                         <li className='nav-item'>
@@ -15,7 +15,7 @@ const NavBar = () => {
                         </li>
                         <li className='nav-item'>
                             <button type="button" className="btn btn-primary"   data-bs-toggle="modal" data-bs-target="#loginModal">
-                    Login
+                                Login
                             </button>
                         </li>
                     </ul>

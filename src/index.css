@@ -1,5 +1,5 @@
 :root {
-  --primary: #4A9B38;
+  --primary: rgb(71, 71, 252);
   --secondary: ;
   --white: #e9eff5;
   --dark-bg: #1e1a1d;
@@ -26,6 +26,12 @@ code {
 
 a{
   cursor: pointer
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex-row {
@@ -99,4 +105,40 @@ a{
 
 .link:hover {
   color: white;
+}
+
+.register-container {
+  margin-top: 20px;
+  height: 500px;
+}
+
+.register-form {
+  width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: rgb(247, 242, 242);
+  box-shadow: rgb(0 0 0 / 40%) 0px 3px 15px;
+}
+
+.logo {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.primary {
+  color: var(--primary)
+}
+
+.unstyled-link {
+  text-decoration: none;
+  color: var(--dark-bg);
+}
+
+.unstyled-link:hover {
+  color: inherit;
+}
+
+.register-form-btns {
+  margin-top: 20px;
+  text-align: right;
 }
