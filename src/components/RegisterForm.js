@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const RegisterForm = () => {
     return (
@@ -27,7 +28,9 @@ const RegisterForm = () => {
                         <input type="password" className="form-control" id="confirmPassword" placeholder="Password" />
                     </div>
                     <div className="register-form-btns">
-                        <button type="submit" className="btn btn-primary">Submit</button>
+                        <Link to='/dashboard'>
+                            <button type="submit" className="btn btn-primary">Submit</button>
+                        </Link>
                     </div>
                 </form>
             </div>
