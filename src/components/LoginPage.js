@@ -27,7 +27,9 @@ const LoginPage = () => {
                             <label className="form-check-label" htmlFor="check1">Keep me logged in</label>
                         </div>
                         <div className="login-form-btns">
-                            <button type="submit" className="btn btn-primary">Login</button>
+                            <Link to='/dashboard'>
+                                <button type="submit" className="btn btn-primary">Login</button>
+                            </Link>
                             <Link to='/register' >
                                 <button type="button" className="btn btn-secondary">Sign Up</button>
                             </Link>

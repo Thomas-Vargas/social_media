@@ -166,10 +166,100 @@ a{
   color: white;
 }
 
+.dashboard-main {
+  background: var(--platinum);
+}
+
+.dashboard-img {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+}
 
 .dashboard-links {
   justify-content: center;
   align-items: center;
   gap: 20px;
   margin-right: 20px;
+}
+
+.dashboard-feed {
+  padding-top: 40px;
+  height: 500px;
+}
+
+.dashboard-feed .row {
+  gap: 10px;
+}
+
+.test {
+  background: var(--gray);
+  height: 400px;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.user p{
+  margin-top: 8px;
+}
+
+.list-group {
+  margin-top: 20px;
+}
+
+.feed-links .list-group-item {
+  border: none;
+}
+
+.post-container {
+  background-color: whitesmoke;
+  box-shadow: rgb(0 0 0 / 40%) 0px 3px 15px;
+}
+
+.post-text-area {
+  margin-top: 10px;
+  height: 80px;
+  resize: none;
+  background-color: #1e1a1d;
+}
+
+.user-post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-post-img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.divider {
+  height: 1px;
+  background-color: #1e1a1d;
+  margin: 20px 0px;
+}
+
+.post-btns {
+  padding-bottom: 10px;
+  gap: 10px;
+}
+
+.post-btn {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 40px;
+  background-color:#1e1a1d;
+  color: whitesmoke;
 }

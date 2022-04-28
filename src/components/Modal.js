@@ -29,10 +29,12 @@ const Modal = () => {
                         </form>
                     </div>
                     <div className="modal-footer">
-                        <button type="submit" className="btn btn-primary">Login</button>
-                        <Link to='/register' data-bs-dismiss="modal">
-                            <button type="button" className="btn btn-secondary" >
-                        Sign Up
+                        <Link to='/dashboard'>
+                            <button type="submit" className="btn btn-primary" data-bs-dismiss="modal" >Login</button>
+                        </Link>
+                        <Link to='/register'>
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" >
+                                Sign Up
                             </button>
                         </Link>
                     </div>

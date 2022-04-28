@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserGroup, faBell } from '@fortawesome/free-solid-svg-icons'
+import { faUserGroup, faBell, faGear } from '@fortawesome/free-solid-svg-icons'
 
 const DashboardNav = () => {
     return (
@@ -11,7 +11,7 @@ const DashboardNav = () => {
                     <div className="container-fluid">
                         <div className='flex-row'>
                             <Link to='/' className='navbar-brand'>
-                            Social Media
+                                Social Media
                             </Link>
                             <form className="form-inline">
                                 <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
@@ -37,6 +37,11 @@ const DashboardNav = () => {
                             <li className='nav-item notifications'>
                                 <a href='#' className='unstyled-link-white'>
                                     <FontAwesomeIcon icon={faBell} size='lg' />
+                                </a>
+                            </li>
+                            <li className='nav-item notifications'>
+                                <a href='#' className='unstyled-link-white'>
+                                    <FontAwesomeIcon icon={faGear} size='lg' className='gear-icon' />
                                 </a>
                             </li>
                         </ul>
