@@ -1,11 +1,13 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faThumbsUp, faShare } from '@fortawesome/free-solid-svg-icons'
 
 const DashBoardFeed = () => {
     return (
         <div className='dashboard-main'>
             <div className='container dashboard-feed'>
                 <div className='row'>
-                    <div className='col'>
+                    <div className='col left-section'>
                         <div className='user'>
                             <img 
                                 src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdeUl_DyPU6PcpmjVhwv42XDrVhhOC7lspJQ&usqp=CAU'
@@ -37,7 +39,7 @@ const DashBoardFeed = () => {
                                         <div className='form-group'>
                                             <textarea
                                                 className='form-control post-text-area'
-                                                placeHolder='Post something'
+                                                placeholder='Post something'
                                                 
                                             ></textarea>
                                         </div>
@@ -53,13 +55,55 @@ const DashBoardFeed = () => {
                             </div>
                         </div>
 
-                        <div className='post-example'>
+                        <div className='post-section'>
+                            <div className='container p-0'>
+                                <div className='example-post post-container'>
+                                    <div className='post-user'>
+                                        <img 
+                                            src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdeUl_DyPU6PcpmjVhwv42XDrVhhOC7lspJQ&usqp=CAU'
+                                            className='user-image'
+                                        ></img>
+                                        <h3>Jawny Johnson</h3>
+                                    </div>
+                                    
+                                    <div className='post-content'>
+                                        <p>This is an example postThis is an example postThis is an example postThis is an example postThis is an example postThis is an example postThis is an example postThis is an example post</p>
+                                    </div>
 
+                                    <div className='post-btns'>
+                                        <button className='user-post-btn'>
+                                            <FontAwesomeIcon icon={faThumbsUp} size='lg' />
+                                            <div>
+                                                Like 
+                                            </div>
+                                        </button>
+                                        <button className='user-post-btn'>
+                                            <FontAwesomeIcon icon={faShare} size='lg' />
+                                            <div>
+                                                Share
+                                            </div>
+                                        </button>
+                                    </div>
+
+                                    <div className='comment-text-area'>
+                                        <form>
+                                            <div className='form-group'>
+                                                <textarea
+                                                    className='form-control comment'
+                                                    placeholder='Comment'
+                                                ></textarea>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div> 
+                            </div>
                         </div>
                     </div>
 
-                    <div className='col test'>
-                        3
+                    <div className='col right-section'>
+                        <div className='right-content'>
+
+                        </div>
                     </div>
                 </div>
             </div>

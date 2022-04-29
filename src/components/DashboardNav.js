@@ -14,7 +14,7 @@ const DashboardNav = () => {
                                 Social Media
                             </Link>
                             <form className="form-inline">
-                                <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                                <input className="form-control mr-sm-2 search-bar" type="search" placeholder="Search" aria-label="Search" />
                             </form>
                         </div>
 
