@@ -175,6 +175,10 @@ a{
   background: var(--platinum);
 }
 
+.dashboard-feed .row {
+  margin: 0px -80px;
+}
+
 .dashboard-img {
   height: 180px;
   width: 180px;
