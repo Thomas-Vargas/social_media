@@ -2,5 +2,5 @@
 module.exports = {
     HOST: 'localhost',
     PORT: 27017,
-    DB: 'social_media_db'
+    DB: 'social_media_db',
 }

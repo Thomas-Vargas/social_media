@@ -1,9 +1,12 @@
 /* eslint-disable no-undef */
 const express = require('express')
 const cors = require('cors')
-const db = require('./app/models')
-const Role = db.role
+require('dotenv').config()
+
 const app = express()
+
+const db = require('./models')
+const Role = db.role
 
 var corsOptions = {
     origin: 'http://localhost:8081'
@@ -13,23 +16,27 @@ app.use(cors(corsOptions))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.get('/', (req, res) => {
-    res.json({ message: 'Welcome to the application.'})
-})
-
 db.mongoose
-    .connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`, {
+    .connect(`mongodb+srv://tvargas:${process.env.SECRET_KEY}@users.r1sfo.mongodb.net/social_media_db?retryWrites=true&w=majority`, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
     .then(() => {
-        console.log('Successfully connect to MongoDB.')
+        console.log('Successfully connected to MongoDB.')
         initial()
     })
     .catch(err => {
         console.error('Connection error', err)
         process.exit()
     })
+
+//Routes
+app.get('/', (req, res) => {
+    res.json({ message: 'Welcome to the application.'})
+})
+
+require('./routes/auth.routes')(app)
+require('./routes/user.routes')(app)
 
 function initial() {
     Role.estimatedDocumentCount((err, count) => {
@@ -63,7 +70,6 @@ function initial() {
 }
 
 const PORT = process.env.PORT || 8080
-
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`)
 })
