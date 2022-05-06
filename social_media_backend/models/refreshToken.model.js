@@ -24,8 +24,8 @@ RefreshTokenSchema.statics.createToken = async function (user) {
         expiryDate: expiredAt.getTime()
     })
     console.log(_object)
-    let refreshTOken = await _object.save()
-    return refreshTOken.token
+    let refreshToken = await _object.save()
+    return refreshToken.token
 }
 
 RefreshTokenSchema.statics.verifyExpiration = (token) => {
