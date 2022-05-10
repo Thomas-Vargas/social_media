@@ -10,9 +10,9 @@ import TestApp from './TestApp'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <TestApp />
-        </BrowserRouter>
-    </React.StrictMode>
+
+    <BrowserRouter>
+        <TestApp />
+    </BrowserRouter>
+
 )
