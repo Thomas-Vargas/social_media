@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.css'
 import AuthService from './services/auth.service'
-import Login from './components/Login'
+import LoginForm from './components/LoginForm'
 import Register from './components/Register'
-import Home from './components/Home'
+import Home from './pages/Home'
 import Profile from './components/Profile'
-import BoardUser from './components/BoardUser'
-import BoardModerator from './components/BoardModerator'
-import BoardAdmin from './components/BoardAdmin'
+import BoardUser from './pages/BoardUser'
+//import BoardModerator from './components/BoardModerator'
+//import BoardAdmin from './components/BoardAdmin'
 
 const TestApp = () => {
     const [showModeratorBoard, setShowModeratorBoard] = useState(false)
@@ -95,12 +94,10 @@ const TestApp = () => {
                 <Routes>
                     <Route path="/" element={<Home/>} />
                     <Route path="/home" element={<Home/>} />
-                    <Route path="/login" element={<Login/>} />
+                    <Route path="/login" element={<LoginForm/>} />
                     <Route path="/register" element={<Register/>} />
                     <Route path="/profile" element={<Profile/>} />
                     <Route path="/user" element={<BoardUser/>} />
-                    <Route path="/mod" element={<BoardModerator/>} />
-                    <Route path="/admin" element={<BoardAdmin/>} />
                 </Routes>
             </div>
         </div>
