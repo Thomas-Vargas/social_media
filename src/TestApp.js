@@ -7,6 +7,7 @@ import Register from './components/Register'
 import Home from './pages/Home'
 import Profile from './components/Profile'
 import BoardUser from './pages/BoardUser'
+import EventBus from './common/EventBus'
 //import BoardModerator from './components/BoardModerator'
 //import BoardAdmin from './components/BoardAdmin'
 
@@ -17,15 +18,27 @@ const TestApp = () => {
 
     useEffect(() => {
         const user = AuthService.getCurrentUser()
+
         if (user) {
             setCurrentUser(user)
             setShowModeratorBoard(user.roles.includes('ROLE_MODERATOR'))
             setShowAdminBoard(user.roles.includes('ROLE_ADMIN'))
         }
+        
+        EventBus.on('logout', () => {
+            logOut()
+        })
+
+        return () => {
+            EventBus.remove('logout')
+        }
     }, [])
 
     const logOut = () => {
         AuthService.logout()
+        setShowModeratorBoard(false)
+        setShowAdminBoard(false)
+        setCurrentUser(undefined)
     }
 
     return (
