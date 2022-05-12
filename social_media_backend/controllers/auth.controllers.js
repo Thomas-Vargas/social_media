@@ -70,10 +70,12 @@ exports.signin = (req, res) => {
             if(!user) {
                 return res.status(404).send({ message: 'User not found.' })
             }
-            var passwordIsValid = bcrypt.compareSync(
+
+            let passwordIsValid = bcrypt.compareSync(
                 req.body.password,
                 user.password
             )
+
             if(!passwordIsValid) {
                 return res.status(401).send({
                     accessToken: null,
@@ -86,7 +88,9 @@ exports.signin = (req, res) => {
             })
 
             let refreshToken = await RefreshToken.createToken(user)
+
             let authorities = []
+
             for (let i = 0; i < user.roles.length; i++) {
                 authorities.push('ROLE_' + user.roles[i].name.toUpperCase())
             }
@@ -116,8 +120,10 @@ exports.refreshToken = async (req, res) => {
             res.status(403).json({ message: 'Refresh token is not in database' })
             return
         }
+
         if(RefreshToken.verifyExpiration(refreshToken)) {
             RefreshToken.findByIdAndRemove(refreshToken._id, { useFindAndModify: false }).exec()
+            
             res.status(403).json({
                 message: 'Refresh token was expired. Please make a new signin request.'
             })
