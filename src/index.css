@@ -47,6 +47,10 @@ a{
   background-color: var(--primary);
 }
 
+.nav-container {
+  gap: 20px;
+}
+
 .navbar-nav {
   gap: 20px;
 }
@@ -76,6 +80,18 @@ a{
 
 .company-info p {
   font-size: 18px;
+}
+
+.login-form-container {
+  margin: 0px 80px;
+}
+
+.login-btn, .signup-btn {
+  margin-top: 20px;
+}
+
+.form-group label{
+  margin-bottom: 10px;
 }
 
 .login-form {

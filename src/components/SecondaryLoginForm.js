@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import Form from 'react-validation/build/form'
 import Input from 'react-validation/build/input'
 import CheckButton from 'react-validation/build/button'
@@ -15,7 +15,7 @@ const required = (value) => {
     }
 }
 
-const LoginForm = () => {
+const SecondaryLoginForm = () => {
     let navigate = useNavigate()
     const form = useRef()
     const checkBtn = useRef()
@@ -64,12 +64,7 @@ const LoginForm = () => {
 
     return (
         <div className="col-md-12">
-            <div className="login-form-container">
-                <img
-                    src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-                    alt="profile-img"
-                    className="profile-img-card"
-                />
+            <div className="secondary-login-form-container">
                 <Form onSubmit={handleLogin} ref={form}>
                     <div className="form-group">
                         <label htmlFor="username">Username</label>
@@ -77,6 +72,7 @@ const LoginForm = () => {
                             type="text"
                             className="form-control"
                             name="username"
+                            placeholder="username"
                             value={username}
                             onChange={onChangeUsername}
                             validations={[required]}
@@ -88,18 +84,24 @@ const LoginForm = () => {
                             type="password"
                             className="form-control"
                             name="password"
+                            placeholder="password"
                             value={password}
                             onChange={onChangePassword}
                             validations={[required]}
                         />
                     </div>
-                    <div className="form-group">
+                    <div className="form-group login-form-btns">
                         <button className="btn btn-primary btn-block login-btn" disabled={loading}>
                             {loading && (
                                 <span className="spinner-border spinner-border-sm"></span>
                             )}
                             <span>Login</span>
                         </button>
+                        <Link to='/register'>
+                            <button className='btn btn-secondary btn-block signup-btn'>
+                                Signup
+                            </button>
+                        </Link>
                     </div>
                     {message && (
                         <div className="form-group">
@@ -115,4 +117,4 @@ const LoginForm = () => {
     )
 }
 
-export default LoginForm 
+export default SecondaryLoginForm 
