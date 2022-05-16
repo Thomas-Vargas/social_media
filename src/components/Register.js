@@ -95,13 +95,9 @@ const Register = () => {
     }
 
     return (
-        <div className="col-md-12">
+        <div className="col-md-12 register-page">
             <div className="card card-container">
-                <img
-                    src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-                    alt="profile-img"
-                    className="profile-img-card"
-                />
+                <h2 className='register-header'>Social Media</h2>
                 <Form onSubmit={handleRegister} ref={form}>
                     {!successful && (
                         <div>
@@ -138,8 +134,8 @@ const Register = () => {
                                     validations={[required, vpassword]}
                                 />
                             </div>
-                            <div className="form-group">
-                                <button className="btn btn-primary btn-block">Sign Up</button>
+                            <div className="form-group signup-btn-container">
+                                <button className="btn signup-btn btn-primary btn-block">Sign Up</button>
                             </div>
                         </div>
                     )}
