@@ -1,10 +1,11 @@
 import React from 'react'
-import AuthService from '../services/auth.service'
+//import AuthService from '../services/auth.service'
+import DashboardFeed from '../components/DashboardFeed'
 
 const Profile = () => {
-    const currentUser = AuthService.getCurrentUser()
+    //const currentUser = AuthService.getCurrentUser()
     return (
-        <div className="container">
+        /*<div className="container">
             <header className="jumbotron">
                 <h3>
                     <strong>{currentUser.username}</strong> Profile
@@ -25,7 +26,9 @@ const Profile = () => {
                 {currentUser.roles &&
           currentUser.roles.map((role, index) => <li key={index}>{role}</li>)}
             </ul>
-        </div>
+            <DashboardFeed />
+        </div>*/
+        <DashboardFeed />
     )
 }
 export default Profile

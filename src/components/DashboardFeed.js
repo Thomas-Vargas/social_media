@@ -1,8 +1,10 @@
 import React from 'react'
+import AuthService from '../services/auth.service'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThumbsUp, faShare } from '@fortawesome/free-solid-svg-icons'
 
 const DashBoardFeed = () => {
+    const currentUser = AuthService.getCurrentUser()
     return (
         <div className='dashboard-main'>
             <div className='container dashboard-feed'>
@@ -13,7 +15,7 @@ const DashBoardFeed = () => {
                                 src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdeUl_DyPU6PcpmjVhwv42XDrVhhOC7lspJQ&usqp=CAU'
                                 className='dashboard-img'
                             ></img>
-                            <p>Jawny Jawnson</p>
+                            <p>{currentUser.username}</p>
                         </div>
 
                         <div className='list-group feed-links rounded-0'>
@@ -63,7 +65,7 @@ const DashBoardFeed = () => {
                                             src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdeUl_DyPU6PcpmjVhwv42XDrVhhOC7lspJQ&usqp=CAU'
                                             className='user-image'
                                         ></img>
-                                        <h3>Jawny Johnson</h3>
+                                        <h3>{currentUser.username}</h3>
                                     </div>
                                     
                                     <div className='post-content'>
