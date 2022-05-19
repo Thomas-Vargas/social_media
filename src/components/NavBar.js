@@ -72,7 +72,7 @@ const NavBar = () => {
                             <div className="navbar-nav ml-auto">
                                 <li className="nav-item">
                                     <Link to={'/profile'} className="nav-link">
-                                        {currentUser.username}
+                                        {currentUser.username.charAt(0).toUpperCase() + currentUser.username.slice(1)}
                                     </Link>
                                 </li>
                                 <li className="nav-item">

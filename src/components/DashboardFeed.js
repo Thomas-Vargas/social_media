@@ -15,7 +15,7 @@ const DashBoardFeed = () => {
                                 src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdeUl_DyPU6PcpmjVhwv42XDrVhhOC7lspJQ&usqp=CAU'
                                 className='dashboard-img'
                             ></img>
-                            <p>{currentUser.username}</p>
+                            <p>{currentUser.username.charAt(0).toUpperCase() + currentUser.username.slice(1)}</p>
                         </div>
 
                         <div className='list-group feed-links rounded-0'>
@@ -65,7 +65,7 @@ const DashBoardFeed = () => {
                                             src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdeUl_DyPU6PcpmjVhwv42XDrVhhOC7lspJQ&usqp=CAU'
                                             className='user-image'
                                         ></img>
-                                        <h3>{currentUser.username}</h3>
+                                        <h3>{currentUser.username.charAt(0).toUpperCase() + currentUser.username.slice(1)}</h3>
                                     </div>
                                     
                                     <div className='post-content'>
